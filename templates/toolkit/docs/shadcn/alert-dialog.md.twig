@@ -7,3 +7,8 @@
 {% block usage %}
 {{ toolkit_code_usage(kit_id.value, component.name) }}
 {% endblock %}
+
+{% block examples %}
+### Opened by default
+{{ toolkit_code_example(kit_id.value, component.name, 'Opened by default', { height: '400px' }) }}
+{% endblock %}
