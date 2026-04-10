@@ -23,7 +23,7 @@ class UxPackageRepository
         $packages = [
             new UxPackage(
                 'icons',
-                'UX Icons',
+                'Icons',
                 'app_icons',
                 '#fff',
                 'linear-gradient(to bottom right, cyan, purple)',
@@ -35,7 +35,7 @@ class UxPackageRepository
 
             new UxPackage(
                 'map',
-                'UX Map',
+                'Map',
                 'app_map',
                 '#1BA980',
                 'linear-gradient(to bottom right, #1BA980, #209127 75%, #C0CB2A)',
@@ -94,6 +94,34 @@ class UxPackageRepository
             ))
             ->setOfficialDocsUrl('https://symfony.com/bundles/StimulusBundle')
             ->setScreencastLink('https://symfonycasts.com/screencast/stimulus', 'More than 40 videos to master Stimulus.'),
+
+            new UxPackage(
+                'toolkit',
+                'Toolkit',
+                'app_toolkit',
+                '#64748b',
+                'linear-gradient(142deg, #334155 -15%, #64748b 95%)',
+                'Build your Design System.',
+                'Collection of components and templates that you can use to build your pages.',
+                null,
+                null,
+                null,
+                true,
+                showDocsLink: false
+            ),
+
+            (new UxPackage(
+                'native',
+                'Native',
+                'app_native',
+                '#c18bf4',
+                'linear-gradient(135deg, #c18bf4 -5%, #8b5cf6 105%)',
+                'Hotwire Native for Symfony',
+                'Build native mobile apps that wrap your Symfony web application',
+                'I need to wrap my Symfony app in a native mobile shell',
+                'native.svg',
+            ))
+                ->setDocsLink('https://native.hotwired.dev/', 'Hotwire Native documentation.'),
 
             new UxPackage(
                 'autocomplete',
@@ -234,34 +262,6 @@ class UxPackageRepository
                 'Switch the visibility of a password field',
                 isRemoved: true,
             ),
-
-            new UxPackage(
-                'toolkit',
-                'Toolkit',
-                'app_toolkit',
-                '#64748b',
-                'linear-gradient(142deg, #334155 -15%, #64748b 95%)',
-                'Build your Design System.',
-                'Collection of components and templates that you can use to build your pages.',
-                null,
-                null,
-                null,
-                true,
-                showDocsLink: false
-            ),
-
-            (new UxPackage(
-                'native',
-                'UX Native',
-                'app_native',
-                '#c18bf4',
-                'linear-gradient(135deg, #c18bf4 -5%, #8b5cf6 105%)',
-                'Hotwire Native for Symfony',
-                'Build native mobile apps that wrap your Symfony web application',
-                'I need to wrap my Symfony app in a native mobile shell',
-                'native.svg',
-            ))
-                ->setDocsLink('https://native.hotwired.dev/', 'Hotwire Native documentation.'),
 
             (new UxPackage(
                 'typed',

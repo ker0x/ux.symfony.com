@@ -23,7 +23,7 @@ class MainController extends AbstractController
     #[Route('/', name: 'app_homepage')]
     public function homepage(UxPackageRepository $packageRepository): Response
     {
-        $packages = $packageRepository->findAll();
+        $packages = $packageRepository->findAll(removed: false);
 
         return $this->render('main/homepage.html.twig', [
             'packages' => $packages,

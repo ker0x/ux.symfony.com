@@ -23,11 +23,11 @@ class UxPackagesController extends AbstractController
     public function __invoke(UxPackageRepository $packageRepository): Response
     {
         $packages = $packageRepository->findAll(removed: false);
-        $deprecatedPackages = $packageRepository->findAll(removed: true);
+        $removedPackages = $packageRepository->findAll(removed: true);
 
         return $this->render('main/packages.html.twig', [
             'packages' => $packages,
-            'deprecated_packages' => $deprecatedPackages,
+            'removed_packages' => $removedPackages,
         ]);
     }
 
