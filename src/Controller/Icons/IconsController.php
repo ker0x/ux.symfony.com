@@ -40,7 +40,7 @@ final class IconsController extends AbstractController
             'ph',
             'heroicons',
         ];
-        $iconSets = array_map(fn ($iconSet) => $iconSetRepository->find($iconSet), $iconSets);
+        $iconSets = array_map(static fn ($iconSet) => $iconSetRepository->find($iconSet), $iconSets);
 
         return $this->render('icons/index.html.twig', [
             'package' => $packageRepository->find('icons'),

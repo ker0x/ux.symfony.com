@@ -13,8 +13,6 @@
  * This file is used by PHPStan, see https://github.com/phpstan/phpstan-symfony#console-command-analysis.
  */
 
-declare(strict_types=1);
-
 require __DIR__.'/../../vendor/autoload.php';
 
 $env = getenv('APP_ENV') ?: 'test';

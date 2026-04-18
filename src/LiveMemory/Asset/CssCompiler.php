@@ -33,7 +33,7 @@ class CssCompiler implements AssetCompilerInterface
 
     public function compile(string $content, MappedAsset $asset, AssetMapperInterface $assetMapper): string
     {
-        return preg_replace_callback('#@import (?:"|\')(.*)(?:\'|");#m', function ($matches) use ($asset) {
+        return preg_replace_callback('#@import (?:"|\')(.*)(?:\'|");#m', static function ($matches) use ($asset) {
             $file = $matches[1];
             $file = substr_replace($file, '/_', strrpos($file, '/'), 1);
             $file = './'.$file.'.scss';

@@ -99,7 +99,7 @@ class ComponentsController extends AbstractController
             HTML);
 
         return new Response(
-            $kitContextRunner->runForKit($kit, fn () => $twig->render($template)),
+            $kitContextRunner->runForKit($kit, static fn () => $twig->render($template)),
             Response::HTTP_OK,
             ['X-Robots-Tag' => 'noindex, nofollow']
         );

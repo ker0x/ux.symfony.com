@@ -13,13 +13,11 @@
  * This file is used by PHPStan, see https://github.com/phpstan/phpstan-doctrine
  */
 
-declare(strict_types=1);
-
 use App\Kernel;
 use Doctrine\ORM\EntityManager;
 use Symfony\Component\Dotenv\Dotenv;
 
-new Dotenv()->bootEnv(__DIR__ . '/../../.env');
+new Dotenv()->bootEnv(__DIR__.'/../../.env');
 
 $kernel = new Kernel($_SERVER['APP_ENV'], (bool) $_SERVER['APP_DEBUG']);
 $kernel->boot();
